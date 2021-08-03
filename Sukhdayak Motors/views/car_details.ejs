@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/style.css">
+	<meta charset="utf-8">
+	<title>
+		Car Details
+	</title>
+</head>
+<body>
+<nav class="navbar navbar-light navbar-expand-lg sticky-top" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand nav-bar-color-style" href="/">Sukhdayak Motors</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#about-us-section">About Us</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/stock">Stock Available</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://goo.gl/maps/TG8VFEQD2yJJCj6f6" target="_blank">Locate Us</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Locate Us</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Brands
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Hyundai(4)</a></li>
+            <li><a class="dropdown-item" href="#">Maruti(1)</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item" href="#">Volkswagen(1)</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- <div id="kuchh-bhi" style="height: 100vh;">
+<img src="Images/SwiftDzire.jpg" id="Cardetailspecificimg" alt="">
+</div> -->
+<div id="carouselExampleIndicators" style="width: 60%; height: 60%;" class="carousel mx-auto slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<%= car.img[0] %>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<%= car.img[1] %>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<%= car.img[2] %>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<%= car.img[3] %>" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <dl class="row border border-dark mx-auto" style="width: 60%">
+  <dt class="col-sm-3">Brand:</dt>
+  <dd class="col-sm-9"><%= car.brand%></dd>
+
+  <dt class="col-sm-3">Model:</dt>
+  <dd class="col-sm-9"><%= car.model%></dd>
+
+  <dt class="col-sm-3">Year:</dt>
+  <dd class="col-sm-9"><%= car.year%></dd>
+
+  <dt class="col-sm-3">Transmition:</dt>
+  <dd class="col-sm-9"><%= car.transmition%></dd>
+
+  <dt class="col-sm-3">KM driven:</dt>
+  <dd class="col-sm-9"><%= car.driven%></dd>
+    
+  <dt class="col-sm-3">Number of Owners:</dt>
+  <dd class="col-sm-9"><%= car.owners%></dd>
+
+  <dt class="col-sm-3">Fuel:</dt>
+  <dd class="col-sm-9"><%= car.fuel%></dd>
+
+  <dt class="col-sm-3">Price:</dt>
+  <dd style="display: inline !important" class="col-sm-9"><%= car.price%></dd>
+</dl>
+
+<!-- <span class="border border-dark">
+  <b>Swift Dzire Vdi</b> <br>
+  <b>Year of Manufacturing:</b> 2015<br>
+  <b>Number of Owners:</b>First Owner<br>
+  <b>Kilometers Diven:</b> 42000Kms<br>
+</span> -->
+<!-- <div style="height: 500px; width: 100%;">
+	<img src="Images/HomePhoto.png" style="height: 100%; width: 100%">
+</div> -->
+<!-- <div>
+        <h1 class="header-main1 mt-3 mb-0">RE-INVENTING</h1>
+        <h3 class="header-main2 mt-0">YOUR <span class="shout gold">DRIVING</span> EXPERIENCE</h3>
+      </div> -->
+     <!--  <div style="height: 90vh; background-color: #7EC3B0;">
+          <span class="border border-dark rounded-2 border-3" style="font-size: 5vh;">Featured Cars &nbsp</span>
+        <div class="card-group">
+  <div class="card">
+    <img src="Images/SwiftDzire.jpg" class="card-img-top" alt="Dzire">
+    <div class="card-body">
+      <h5 class="card-title"><b>Swift Dzire</b></h5>
+      <p class="card-text"><b>Year of Registration:</b> 2015<p>
+        <p class="card-text"><b>Fuel Type:</b> Diesel<p>
+          <p class="card-text"><b>Kilometers Driven:</b> 42000<p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-info">View Details</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="Images/polo.jpg" class="card-img-top" alt="Polo">
+    <div class="card-body">
+      <h5 class="card-title">Volkswagen Polo</h5>
+      <p class="card-text"><b>Year of Registration:</b> 2015<p>
+        <p class="card-text"><b>Fuel Type:</b> Diesel<p>
+          <p class="card-text"><b>Kilometers Driven:</b> 82000<p>
+    </div>
+     <div class="card-footer">
+      <button type="button" class="btn btn-info">View Details</button>
+    </div> 
+  </div>
+  <div class="card">
+    <img src="Images/i20Sample.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Hyundai i20</h5>
+      <p class="card-text"><b>Year of Registration:</b> 2015<p>
+        <p class="card-text"><b>Fuel Type:</b> Diesel<p>
+          <p class="card-text"><b>Kilometers Driven:</b> 35000<p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-info">View Details</button>
+    </div>
+  </div>
+</div>
+	
+</div> -->
+
+ <div id= "about-us-section"class="about-section">
+  <h1>About Us Page</h1>
+  <p>We deal in sale and purchase of Second Hand Cars in Ludhiana.</p>
+  <p>We've been doing this business for more than 20 years</p>
+</div>
+
+ <h2 style="text-align:center">Our Team</h2>
+ <div class="row margin-reduction-samraat">
+  <div class="column">
+    <div class="card">
+      <img src="/Images/Rakesh.jpg" alt="Rakesh" style="width:80%">
+      <div class="container">
+        <h2>Rakesh Ahuja</h2>
+        <p class="title">Dealer</p>
+         <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p>  -->
+        <p>rakesh508@ymail.com</p>
+        <p>+91 98140 80481</p>
+         <!-- <p><button class="button">Contact</button></p>  -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/Images/Bitoo.jpg" alt="Bitoo" style="width:80%">
+      <div class="container">
+        <h2>Sanjeev Bitoo</h2>
+        <p class="title">Dealer</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p>  -->
+        <p>sanjeev.bitoo@gmail.com</p>
+        <p>+91 94175 00011</p>
+         <!-- <p><button class="button">Contact</button></p>  -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/Images/Rupesh.jpg" alt="Rupesh" style="width:80%">
+      <div class="container">
+        <h2>Rupesh Ahuja</h2>
+        <p class="title">Website Designer</p>
+        <p>rupeshahuja28@gmail.com</p>
+        <p>+91 88472 69524</p>
+       <!-- <p><button class="button">Contact</button></p>  -->
+      </div>
+    </div>
+  </div>
+  <p style="font-size: 5vh; font-family: cursive ;">Visit us:</p>
+  <p style="font-size: 3vh;font-family: cursive ;">Shop Number 5, Gian Singh Rarewala Market, near Preet Palace, Link Road, Ludhiana, Punjab</p>
+</div>  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="store.js"></script> -->
+</body>
+</html>
