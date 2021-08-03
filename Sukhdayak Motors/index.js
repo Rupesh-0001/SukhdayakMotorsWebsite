@@ -40,7 +40,7 @@ var cars = {
       "/Images/SwiftDzire/SwiftDzire1.jpg",
       "/Images/SwiftDzire/SwiftDzire2.jpg",
       "/Images/SwiftDzire/SwiftDzire3.jpg",
-      "/Images/SwiftDzire/SwiftDzire4.jpg",
+      "/Images/SwiftDzire/SwiftDzire4.JPG",
     ]
   },
   polo:{
