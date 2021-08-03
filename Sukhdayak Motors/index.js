@@ -17,7 +17,7 @@ app.get('/', function(req, res){
     app.get('/stock', function(req, res){
       // res.send('<h1 style="color:midnightblue;">We need not to update content header Express does it for us</h1>');
     
-          return res.render('stock', {
+          return res.render('Stock', {
             title:"Stock"
             });
         });
